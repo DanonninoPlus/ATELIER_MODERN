@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ATELIER MODERN | Elegancia en cada detalle</title>
+<meta content="Descubre la exclusividad de ATELIER MODERN. Moda minimalista y sofisticada para la mujer contemporánea." name="description"/>
+<!-- Open Graph -->
+<meta content="ATELIER MODERN | Elegancia en cada detalle" property="og:title"/>
+<meta content="Colección exclusiva de moda femenina minimalista. Handcrafted for the discerning." property="og:description"/>
+<meta content="https://picsum.photos/seed/atelier-og/1200/630" property="og:image"/>
+<meta content="website" property="og:type"/>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-primary": "#ccc5c4",
+                "on-surface": "#1c1b1b",
+                "primary": "#625d5d",
+                "on-error": "#ffffff",
+                "on-secondary": "#ffffff",
+                "surface-container-high": "#ece7e6",
+                "error-container": "#ffdad6",
+                "surface-container-lowest": "#ffffff",
+                "secondary-container": "#e4e2e1",
+                "surface-container-low": "#f7f3f2",
+                "error": "#ba1a1a",
+                "secondary-fixed-dim": "#c8c6c5",
+                "background": "#fdf8f7",
+                "surface-bright": "#fdf8f7",
+                "tertiary-fixed-dim": "#e9c349",
+                "surface": "#fdf8f7",
+                "surface-container-highest": "#e6e1e1",
+                "surface-variant": "#e6e1e1",
+                "on-secondary-fixed": "#1b1c1c",
+                "tertiary-container": "#fff2d6",
+                "on-error-container": "#93000a",
+                "surface-tint": "#625d5d",
+                "on-background": "#1c1b1b",
+                "on-secondary-container": "#656464",
+                "primary-fixed-dim": "#ccc5c4",
+                "on-secondary-fixed-variant": "#474746",
+                "primary-container": "#f9f1f0",
+                "on-primary": "#ffffff",
+                "inverse-surface": "#313030",
+                "primary-fixed": "#e8e1e0",
+                "outline": "#7f7574",
+                "surface-container": "#f1edec",
+                "tertiary": "#735c00",
+                "on-primary-fixed": "#1e1b1b",
+                "secondary": "#5f5e5e",
+                "outline-variant": "#d0c4c2",
+                "inverse-on-surface": "#f4f0ef",
+                "tertiary-fixed": "#ffe088",
+                "on-primary-fixed-variant": "#4a4645",
+                "on-tertiary-fixed-variant": "#574500",
+                "secondary-fixed": "#e4e2e1",
+                "on-primary-container": "#726d6d",
+                "on-surface-variant": "#4d4544",
+                "on-tertiary-fixed": "#241a00",
+                "surface-dim": "#ddd9d8",
+                "on-tertiary-container": "#876b00",
+                "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "margin-desktop": "64px",
+                "gutter": "24px",
+                "unit": "8px",
+                "section-gap": "128px",
+                "container-max": "1440px"
+            },
+            "fontFamily": {
+                "body-lg": ["Plus Jakarta Sans"],
+                "body-md": ["Plus Jakarta Sans"],
+                "display-lg": ["Noto Serif"],
+                "headline-xl": ["Noto Serif"],
+                "label-caps": ["Plus Jakarta Sans"],
+                "cta": ["Plus Jakarta Sans"],
+                "headline-md": ["Noto Serif"]
+            },
+            "fontSize": {
+                "body-lg": ["1.125rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "display-lg": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                "headline-xl": ["3rem", {"lineHeight": "1.2", "fontWeight": "400"}],
+                "label-caps": ["0.75rem", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                "cta": ["0.875rem", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-md": ["2rem", {"lineHeight": "1.3", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(253, 248, 247, 0) 0%, rgba(253, 248, 247, 1) 100%);
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#F9F1F0]/80 dark:bg-neutral-900/80 backdrop-blur-xl text-neutral-900 dark:text-neutral-100 border-b border-neutral-200/20 dark:border-neutral-800/20 shadow-[0_4px_30px_rgba(0,0,0,0.03)] backdrop-blur-md fixed top-0 w-full z-50 flex justify-between items-center px-8 h-20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer">menu</span>
+</div>
+<div class="text-2xl font-serif italic tracking-tighter text-neutral-900 dark:text-neutral-50">ATELIER MODERN</div>
+<div class="flex items-center gap-6 font-serif uppercase tracking-widest text-sm">
+<nav class="hidden md:flex gap-8">
+<a class="text-[#D4AF37] border-b border-[#D4AF37] pb-0.5 hover:text-[#D4AF37] transition-colors duration-500" href="#">INICIO</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#D4AF37] transition-colors duration-500" href="#catalogo">COLECCIONES</a>
+</nav>
+<span class="material-symbols-outlined cursor-pointer">shopping_bag</span>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="An ethereal editorial fashion photograph of a woman in a flowing silk cream-colored dress, standing in a brightly lit, minimalist architectural space with soft shadows. The lighting is high-key and warm, emphasizing the textures of the fabric. The aesthetic is sophisticated and quiet luxury, reflecting a modern atelier vibe with a palette of whites, soft pinks, and warm grays. The mood is serene and confident." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4XmSUypYEJd47ZQvcs33tQQLoEYGbHzqGuCVOfCuvpwCPARv66U80aM_JJ3XQpSGhD1gSNgL68YGWixohQMT7RoLeYXAkhf1XyTr9kFeK1JC19Oc_NnBY4ELoEDrn1WQ0cPZt_FqgUbiru9bAspBh2cuZ48s0Haz9inT8NUx8WqD4fj2ejs6cea2tqOKxzZcBR0tqcmATwYbYPWmOBhrn-TBZnzttERR2q7423tT17lhY7Ik5bPk1J8XxMN72MDeiaAyZwUmy6KU"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+<h1 class="font-display-lg text-display-lg mb-4 text-on-surface tracking-tighter italic">ATELIER MODERN</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-12 tracking-wide">Para los que tienen buen gusto.</p>
+<a class="inline-block bg-on-surface text-surface py-5 px-12 font-cta text-cta uppercase tracking-widest hover:bg-primary transition-all duration-500" href="#catalogo">
+                Ver Catálogo
+            </a>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</div>
+</section>
+<!-- Catalogue Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="catalogo">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase mb-2 block">Nuestra Colección</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Productos</h2>
+</div>
+<div class="flex gap-4">
+<span class="font-label-caps text-label-caps border-b border-on-surface pb-1 cursor-pointer">Todos</span>
+<span class="font-label-caps text-label-caps text-outline hover:text-on-surface transition-colors cursor-pointer">Ropa</span>
+<span class="font-label-caps text-label-caps text-outline hover:text-on-surface transition-colors cursor-pointer">Accesorios</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-gutter gap-y-16">
+<!-- Product Card 1 -->
+<div class="product-card group reveal">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="product-image w-full h-full object-cover transition-transform duration-700" data-alt="A premium silk midi dress in a soft champagne color, displayed on a minimalist background with clean lines and soft ambient lighting. The fabric has a gentle sheen and elegant drape. The overall style is high-end editorial, focusing on the quality of craftsmanship and the luxury of the material. Soft shadows and a neutral color palette enhance the sophisticated atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhC72HRipesewcKUN8jBDeo-fQmV5L97UBhmqVxoWq4e7O-dcvdVePaBbsQpw3I2Nz39BduRtiD6-skSBNlOOerKmZZTmaP78HZbNJTeTpEK_9gd4WDusyGcZcXAuDqK3LVcSBrGTLdaKHGIkOSXqL8_KNHQKqcLSKM6yAJjlDJhmjTNyu2HNCBn1bj7wFlGdVqgbSZPtWMLKGohT1_Jnw7P41buNg8_rEIYxAqa-7YXdfq55bdYVLdPAGWoso7VWwxYtTd90hRxY"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Vestido de Seda Luna</h3>
+<p class="font-body-md text-secondary">$2,499 MXN</p>
+<div class="flex gap-2 py-2">
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">S</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">M</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">L</span>
+</div>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-on-surface py-3 font-cta text-cta uppercase hover:bg-on-surface hover:text-surface transition-all duration-300">
+<span class="material-symbols-outlined text-sm">chat</span> Quiero este
+                    </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-card group reveal">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="product-image w-full h-full object-cover transition-transform duration-700" data-alt="A structured ivory wool blazer with clean, modern tailoring, photographed in a high-key studio setting. The lighting is soft and even, highlighting the sharp lapels and high-quality wool texture. The aesthetic is minimal and professional, embodying the modern atelier philosophy of quiet luxury. The composition is centered and balanced within a pristine white space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5pVkw4qwVR-T_1XnxyjlKSQywzm98keQ1aaA2saBd951BsgBs6V2mXTwqhvdHe2zd-V_GzBw3ZS7dkRTxEvt4AaNxrwHG9av7tUWDccdFXEI2Uj_NidVwMlxXiqLKpPKA9lSH26mxnJRtWejpZ9TtSi2WQKsTwqfn4bMfWwTdUKTrNseSGsUYiZuTCxBVVv6iIWVhpdpyab8geYZvdNY2EgAzQnSPLDMRcDtfw7hTC2hRuhdbaSwcAdFbewEd-p61nwwuUOjjl5Y"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Blazer Marfil</h3>
+<p class="font-body-md text-secondary">$3,899 MXN</p>
+<div class="flex gap-2 py-2">
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">M</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">L</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">XL</span>
+</div>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-on-surface py-3 font-cta text-cta uppercase hover:bg-on-surface hover:text-surface transition-all duration-300">
+<span class="material-symbols-outlined text-sm">chat</span> Quiero este
+                    </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-card group reveal">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="product-image w-full h-full object-cover transition-transform duration-700" data-alt="Wide-leg tailored trousers in a soft taupe linen fabric, showcased in a bright, sun-drenched minimalist interior. The light creates long, soft shadows that emphasize the relaxed yet sophisticated silhouette. The palette is dominated by earthy neutrals and warm whites. The vibe is effortless elegance and high-end summer fashion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvzwegihAkznfAgDQ6R4LZ7P4k0JekrsLVV_b3xma9mPt5USpjlxBILer1FCPI1Jd4xoToAtugbSrRbPNdC1rNzsfs-wNNi_e3Y3_sjf7XxlCA-fTd_iHZjd6SYFYCOS1NC0Ei-4v-Lk7LGOmzIULZsOeqIt5ZHVCGgsdaOa6SB8Ooc3v66JF8ShJX8NDuOC0H9F-XbFd0YGTBU3wvgMgtshK7e-jt1mKxogNA4P554Dhrt_SNiLvJTjwATVHWUUQKmorsuCuZJ3w"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Pantalón Lino Arena</h3>
+<p class="font-body-md text-secondary">$1,899 MXN</p>
+<div class="flex gap-2 py-2">
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">S</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">M</span>
+</div>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-on-surface py-3 font-cta text-cta uppercase hover:bg-on-surface hover:text-surface transition-all duration-300">
+<span class="material-symbols-outlined text-sm">chat</span> Quiero este
+                    </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="product-card group reveal">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="product-image w-full h-full object-cover transition-transform duration-700" data-alt="A minimal asymmetric knit top in a deep charcoal color, presented against a soft-textured concrete wall. The lighting is dramatic yet soft, creating a play of light and shadow that defines the garment's unique shape. The aesthetic is contemporary and artistic, reflecting a focus on silhouette and sculptural fashion. Dark tones and clean lines dominate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyB_zK4XfhzvGCarZA1q7u6L8aNf-K20n5IPer57q8gDA3WJz5Awa5HJnHa22H8HX-zEAx35RO5DRSYeplBM9Gtte2urgsjuTdVB82dnncYhWX8qf5hn5Z3dR4D7QROBCfnhZdZWRDPTbpowrom9hI7jbMdw3YiTQzY81ndlVrkqTMs4UW91TkXGG_9Ga4Vdt27ZQI1dLYHD2BRNp8kLZ60weiHzRfjjej9-FMN3Ww3rY6MCpqPkKeyIzgdscwV9v_I2xKASMNwMM"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Top Asimétrico Onix</h3>
+<p class="font-body-md text-secondary">$1,299 MXN</p>
+<div class="flex gap-2 py-2">
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">S</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">M</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">L</span>
+</div>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-on-surface py-3 font-cta text-cta uppercase hover:bg-on-surface hover:text-surface transition-all duration-300">
+<span class="material-symbols-outlined text-sm">chat</span> Quiero este
+                    </button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="product-card group reveal">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="product-image w-full h-full object-cover transition-transform duration-700" data-alt="A pleated satin midi skirt in a subtle dusty rose hue, captured in motion to show the fluidity of the fabric. The setting is a minimalist studio with warm, ambient lighting. The visual style is feminine and delicate, emphasizing the interplay between light and the satin's luster. The mood is romantic and refined." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjVvIOu57ny0HYpU3tYWOXis0ukGXx1UM5I2i-JEVLFOpA19u_LF7D5kLDQPW3ljtzlWwAwzqjit8v6RRJpnEdzLazs1LMYgppsRYEyHV5zfRjqS4cnBUKPfLoSxvoNGZGMMmV7pDDPp7bLtR-mZn3465O-x-m7IU87YirQ4-opUJ08Kaa4FuafcCGueRgy6Phi-BYf-yEBoyv416zxZkEzoDugADeb6yNsPKkVeDjiL-CMQkdn_nJ1529CvJ9GbwBeh6Lul2nVeE"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Falda Satinada Rosa</h3>
+<p class="font-body-md text-secondary">$1,699 MXN</p>
+<div class="flex gap-2 py-2">
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">M</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">L</span>
+</div>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-on-surface py-3 font-cta text-cta uppercase hover:bg-on-surface hover:text-surface transition-all duration-300">
+<span class="material-symbols-outlined text-sm">chat</span> Quiero este
+                    </button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="product-card group reveal">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="product-image w-full h-full object-cover transition-transform duration-700" data-alt="An oversized crisp white poplin shirt with architectural sleeves, displayed against a light gray minimalist background. The lighting is bright and clean, emphasizing the structured cotton fabric and sharp collar. The aesthetic is clean-cut and sophisticated, representing a classic atelier staple reinvented with modern proportions. Pristine and orderly mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH5xqk6u7uzWJ3-Ws3RgbSRUi62akEiSqZoCZ3e3biS1R8fx-oKjQN-CGGOB2qAir4DSCnFTWC2ecDlhlI6s2nTKFGBGEQFITBUqsP-iLey_-0CXs2DNStQydcJthTeVKPCU3kHdal3CboayTx2HKXpv0MGJoNawrdQJrtU0xPRyM3UY6WnxQn9XIKNE7QAueCFn7WA_xsda5BKtF5ZCyiIce7KfhdEjctDragCbMbCaTB_SDkWjyE3uz5vD7HZ64imvsvdIa6ad4"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Camisa Oversize Alba</h3>
+<p class="font-body-md text-secondary">$1,450 MXN</p>
+<div class="flex gap-2 py-2">
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">S</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">M</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">L</span>
+</div>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-on-surface py-3 font-cta text-cta uppercase hover:bg-on-surface hover:text-surface transition-all duration-300">
+<span class="material-symbols-outlined text-sm">chat</span> Quiero este
+                    </button>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="product-card group reveal">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="product-image w-full h-full object-cover transition-transform duration-700" data-alt="A long minimalist wool coat in a rich camel color, styled in a vast, empty gallery space with polished floors. The lighting is soft and directional, casting subtle shadows that define the coat's clean silhouette. The palette is composed of warm earth tones and neutral grays. The mood is one of timeless elegance and winter sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpiJ1tH-b3GQCCXa_jsoZS3tGMPpfbGpT1MiZjtO2oDN6odDvKOOwZ7gjFuFg2XOdU4JibS030a8iBtuT4KOBc_csmCR1Bv4XGp_ONw855ee2Bu2w3wvvbHpuOsrqUB5DAYYmhgNVJG3j2aIMNxcmCMmdjJBJQCCv03rmboormmpPFpMaGJajTJk1_QZ5gCVNNm_eZx1tJ1Yf_SM2tu49FxOnKpt8G_8cPxSeYA_7--eY9iEIwCTWWLVllElN-6yLAichWsy8J9OM"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Abrigo Lana Camel</h3>
+<p class="font-body-md text-secondary">$5,299 MXN</p>
+<div class="flex gap-2 py-2">
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">M</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">L</span>
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">XL</span>
+</div>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-on-surface py-3 font-cta text-cta uppercase hover:bg-on-surface hover:text-surface transition-all duration-300">
+<span class="material-symbols-outlined text-sm">chat</span> Quiero este
+                    </button>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="product-card group reveal">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="product-image w-full h-full object-cover transition-transform duration-700" data-alt="A delicate gold minimalist necklace with a single small pearl, displayed on a soft velvet surface. The lighting is intimate and warm, emphasizing the jewelry's fine detail and luster. The aesthetic is luxurious and understated, focusing on handcrafted beauty. The mood is quiet and precious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcSTV8AJt0wUn1glnQpsnyGlz6h-JkZ4lPwUORJNpH0Pg79yGj1nb7Zd02vn4fRVRk47wWjT0Yiha0W7ev1gK3LrFENhaKb636VLJnEzpdAvKvzgVxRC_yU2TwVlo0ii2PjVnGddGMtkXBq0kj006nKL_5oCxQj4gT2PwOw8XxSI6FnHPT_Ovpo2S5HcSkLj6Dvcnc9mp74X0F5Fy2IwrZIIw_5oznBN3MpjbHlWIB0PswnrVKGh2xJt5mvTomqg1BmIR0k295aI4"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Collar Perla Minimal</h3>
+<p class="font-body-md text-secondary">$950 MXN</p>
+<div class="flex gap-2 py-2">
+<span class="text-[10px] font-label-caps border border-outline-variant px-2 py-0.5">Única</span>
+</div>
+<button class="w-full mt-4 flex items-center justify-center gap-2 border border-on-surface py-3 font-cta text-cta uppercase hover:bg-on-surface hover:text-surface transition-all duration-300">
+<span class="material-symbols-outlined text-sm">chat</span> Quiero este
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#F9F1F0] dark:bg-neutral-950 w-full border-t border-neutral-200 dark:border-neutral-800 pt-16 pb-8 px-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="text-lg font-serif italic text-neutral-900 dark:text-neutral-100">ATELIER MODERN</div>
+<nav class="flex gap-8 font-serif text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-500">
+<a class="hover:tracking-[0.2em] transition-all duration-300 opacity-80 hover:opacity-100" href="#">COLECCIÓN</a>
+<a class="hover:tracking-[0.2em] transition-all duration-300 opacity-80 hover:opacity-100" href="#">NOSOTROS</a>
+<!-- <a class="hover:tracking-[0.2em] transition-all duration-300 opacity-80 hover:opacity-100" href="#">CARE GUIDE</a> -->
+<a class="hover:tracking-[0.2em] transition-all duration-300 opacity-80 hover:opacity-100" href="#">CONTACTO</a>
+</nav>
+<div class="font-serif text-xs tracking-widest uppercase text-neutral-800 dark:text-neutral-200 opacity-80">
+                © 2026 ATELIER MODERN. PARA LOS QUE TIENEN BUEN GUSTO.
+            </div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="bg-[#F9F1F0]/90 dark:bg-neutral-900/90 backdrop-blur-lg text-neutral-900 dark:text-neutral-100 fixed bottom-0 w-full z-50 md:hidden rounded-t-xl border-t border-neutral-200/30 dark:border-neutral-800/30 shadow-[0_-5px_25px_rgba(0,0,0,0.05)] flex justify-around items-center h-16 px-4">
+<span class="material-symbols-outlined text-[#D4AF37] scale-110 active:scale-95 transition-all duration-300">home</span>
+<span class="material-symbols-outlined text-neutral-400 dark:text-neutral-500 hover:text-[#D4AF37] active:scale-95 transition-all duration-300">search</span>
+<span class="material-symbols-outlined text-neutral-400 dark:text-neutral-500 hover:text-[#D4AF37] active:scale-95 transition-all duration-300">favorite</span>
+<span class="material-symbols-outlined text-neutral-400 dark:text-neutral-500 hover:text-[#D4AF37] active:scale-95 transition-all duration-300">person</span>
+</nav>
+<!-- Floating WhatsApp Button -->
+<button class="fixed bottom-24 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 md:bottom-8" id="whatsappBtn">
+<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</button>
+<script>
+        // Configuración de WhatsApp
+        const whatsappNumber = "521234567890"; // Reemplaza con tu número
+
+        // Animación Reveal on Scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Initial check
+        reveal();
+
+        // Botones "Quiero este" y WhatsApp FAB
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const productName = e.target.closest('.product-card')?.querySelector('h3')?.innerText || 'nuestros productos';
+                const message = encodeURIComponent(`Hola ATELIER MODERN, me interesa el ${productName}. ¿Podrían darme más información?`);
+                window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+            });
+        });
+
+        document.getElementById('whatsappBtn').addEventListener('click', () => {
+            const message = encodeURIComponent('Hola ATELIER MODERN, me gustaría recibir el catálogo completo.');
+            window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+        });
+    </script>
+</body></html>
