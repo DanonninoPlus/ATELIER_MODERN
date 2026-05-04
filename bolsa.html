@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#ccc5c4",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-surface-variant": "#4d4544",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "outline-variant": "#d0c4c2",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#241a00",
+                    "surface-dim": "#ddd9d8",
+                    "on-secondary-container": "#656464",
+                    "surface": "#fdf8f7",
+                    "on-background": "#1c1b1b",
+                    "inverse-surface": "#313030",
+                    "surface-container-high": "#ece7e6",
+                    "surface-bright": "#fdf8f7",
+                    "on-primary-fixed": "#1e1b1b",
+                    "primary-fixed-dim": "#ccc5c4",
+                    "on-primary-fixed-variant": "#4a4645",
+                    "inverse-on-surface": "#f4f0ef",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "tertiary-container": "#fff2d6",
+                    "on-primary-container": "#726d6d",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#625d5d",
+                    "primary-container": "#f9f1f0",
+                    "secondary": "#5f5e5e",
+                    "on-error": "#ffffff",
+                    "outline": "#7f7574",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#e4e2e1",
+                    "surface-container": "#f1edec",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "error-container": "#ffdad6",
+                    "background": "#fdf8f7",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#735c00",
+                    "primary": "#625d5d",
+                    "tertiary-fixed": "#ffe088",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e6e1e1",
+                    "surface-container-low": "#f7f3f2",
+                    "surface-container-highest": "#e6e1e1",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "primary-fixed": "#e8e1e0",
+                    "on-tertiary-container": "#876b00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1440px",
+                    "section-gap": "128px"
+            },
+            "fontFamily": {
+                    "cta": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Noto Serif"],
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "headline-md": ["Noto Serif"],
+                    "display-lg": ["Noto Serif"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "cta": ["0.875rem", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-xl": ["3rem", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "label-caps": ["0.75rem", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "headline-md": ["2rem", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "display-lg": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["1.125rem", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .cart-item-hover:hover .quantity-controls {
+            opacity: 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopAppBar -->
+<header class="bg-[#F9F1F0]/80 dark:bg-neutral-900/80 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-neutral-200/20 dark:border-neutral-800/20 shadow-[0_4px_30px_rgba(0,0,0,0.03)] backdrop-blur-md">
+<div class="flex justify-between items-center px-8 h-20 w-full">
+<div class="flex items-center gap-4">
+<button class="text-neutral-900 dark:text-neutral-100 transition-opacity duration-300 ease-out">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="text-2xl font-serif italic tracking-tighter text-neutral-900 dark:text-neutral-50 uppercase tracking-widest text-sm">ATELIER MODERN</div>
+<div class="flex items-center gap-4">
+<button class="text-neutral-900 dark:text-neutral-100 relative transition-opacity duration-300 ease-out">
+<span class="material-symbols-outlined text-[#D4AF37]" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[8px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 min-h-screen px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-12">
+<!-- Header Section -->
+<div class="text-center py-8">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-2">Mi Bolsa</h1>
+<p class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Resumen de tu selección exclusiva</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Cart Content -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Product Card 1 -->
+<div class="cart-item-hover group flex flex-col sm:flex-row gap-6 p-4 border-b border-outline-variant/30 transition-all duration-500 hover:bg-primary-container/50">
+<div class="w-full sm:w-48 aspect-[3/4] overflow-hidden bg-surface-container rounded-sm">
+<img alt="Vestido de Seda Luna" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-fashion photograph of a woman wearing a flowing Vestido de Seda Luna. The dress is a deep obsidian silk that catches the soft, warm studio light, creating elegant highlights. The setting is a minimalist atelier with neutral warm tones and subtle architectural shadows. The lighting is editorial and soft, emphasizing the luxurious texture of the fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDp0husK4pnJcWw0va85GRgAaEljXmC50C3tKKa78K5x3mvnU5lyTCTpWEGR8vd6Kmt0kflw4nJO4vigwV2bFOm0RA6Mv3Xxn5BmHxJ9QQievvI5Xxd0WETnTSD8fiVrKGrvxIbSn2jCcOzTwRJqAJaM2lHBa5aFtSyUxVo2wxZhfl81qxTnH_ETHqIC5TafppQ70JwxsCVgK0p_NiP52mIiBg-4LE5_5EPs33EGiK92TogZm5yvI_axOyJLNaEX33w5WxiMY91KM"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-2">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-body-lg mb-1">Vestido de Seda Luna</h3>
+<p class="font-label-caps text-label-caps text-secondary mb-4">TALLA: M</p>
+</div>
+<button class="text-secondary hover:text-error transition-colors duration-300">
+<span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center border border-outline-variant rounded-sm overflow-hidden">
+<button class="px-3 py-1 hover:bg-secondary-container transition-colors">-</button>
+<span class="px-4 py-1 font-body-md text-sm border-x border-outline-variant">1</span>
+<button class="px-3 py-1 hover:bg-secondary-container transition-colors">+</button>
+</div>
+<p class="font-body-lg text-primary font-semibold">$5,400 MXN</p>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="cart-item-hover group flex flex-col sm:flex-row gap-6 p-4 border-b border-outline-variant/30 transition-all duration-500 hover:bg-primary-container/50">
+<div class="w-full sm:w-48 aspect-[3/4] overflow-hidden bg-surface-container rounded-sm">
+<img alt="Blazer Marfil" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated tailored Blazer Marfil displayed on a minimalist mannequin against a soft beige backdrop. The lighting is bright and airy, reflecting a quiet luxury aesthetic. The ivory fabric shows refined craftsmanship with subtle texture and gold-toned hardware details. The overall mood is clean, elegant, and timeless." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPDa47B2NRtEoGe70BYMNWoAvIjfrqiDQop649cYCyJAWn-v6F3ExpjCFpe3N6r66rxULHSLv5JkprpZoZKYeAjCXH0flaKwkNGd4g_Dwl8Rvo7OE-fNGKDUnbtscxd94_OaDN0kyGQofIk8JUIAOvZR78cAHgNAsW46d8DFNE_q1hw9BknZPNNDAv_W30H-BI3NXax9jrJmmh1uyyYDwD1ufAvhqXn9tv87wFHenu_MWwioXTD05T05iQAXpDjwJGon_jKkZNHvQ"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-2">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-body-lg mb-1">Blazer Marfil</h3>
+<p class="font-label-caps text-label-caps text-secondary mb-4">TALLA: S</p>
+</div>
+<button class="text-secondary hover:text-error transition-colors duration-300">
+<span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center border border-outline-variant rounded-sm overflow-hidden">
+<button class="px-3 py-1 hover:bg-secondary-container transition-colors">-</button>
+<span class="px-4 py-1 font-body-md text-sm border-x border-outline-variant">1</span>
+<button class="px-3 py-1 hover:bg-secondary-container transition-colors">+</button>
+</div>
+<p class="font-body-lg text-primary font-semibold">$3,850 MXN</p>
+</div>
+</div>
+</div>
+<!-- Promo Code -->
+<div class="mt-8">
+<label class="font-label-caps text-label-caps text-secondary block mb-2 uppercase">Código de cortesía</label>
+<div class="flex gap-4">
+<input class="flex-1 bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors font-body-md text-sm py-2 px-0" placeholder="INTRODUCE TU CÓDIGO" type="text"/>
+<button class="font-cta text-cta uppercase py-2 px-6 border border-primary hover:bg-primary hover:text-on-primary transition-all duration-300">Aplicar</button>
+</div>
+</div>
+</div>
+<!-- Summary Sidebar -->
+<div class="lg:col-span-4">
+<div class="bg-primary-container p-8 sticky top-32 shadow-[0_10px_40px_rgba(0,0,0,0.02)]">
+<h2 class="font-headline-md text-headline-md mb-8 border-b border-outline-variant/30 pb-4">Resumen</h2>
+<div class="flex flex-col gap-4 mb-8">
+<div class="flex justify-between font-body-md text-secondary">
+<span>Subtotal</span>
+<span>$9,250 MXN</span>
+</div>
+<div class="flex justify-between font-body-md text-secondary">
+<span>Envío (Standard)</span>
+<span class="text-[#D4AF37]">Cortesía</span>
+</div>
+<div class="flex justify-between font-body-md text-secondary border-t border-outline-variant/30 pt-4 mt-2">
+<span class="font-semibold text-primary">Total estimado</span>
+<span class="font-semibold text-primary">$9,250 MXN</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<button class="bg-primary text-on-primary font-cta text-cta py-4 w-full flex items-center justify-center gap-3 hover:bg-on-surface-variant transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_cart_checkout">shopping_cart_checkout</span>
+                                CONTINUAR COMPRA
+                            </button>
+<button class="bg-[#25D366] text-white font-cta text-cta py-4 w-full flex items-center justify-center gap-3 hover:brightness-95 transition-all duration-300 shadow-lg">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                                PEDIR POR WHATSAPP
+                            </button>
+</div>
+<p class="mt-8 text-center font-body-md text-[10px] text-secondary uppercase tracking-widest leading-relaxed">
+                            Impuestos incluidos. Pago seguro cifrado.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Empty State (Hidden by default for this example, but structurally present) -->
+<div class="hidden flex flex-col items-center justify-center py-24 text-center">
+<div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-[48px] text-primary/30" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-4 text-primary">Tu bolsa está vacía</h2>
+<p class="font-body-md text-secondary mb-12 max-w-sm mx-auto">Parece que aún no has seleccionado ninguna de nuestras piezas artesanales.</p>
+<button class="px-12 py-4 border border-primary text-primary font-cta text-cta hover:bg-primary hover:text-on-primary transition-all duration-500 uppercase tracking-widest">
+                    Seguir viendo
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-[#F9F1F0]/90 dark:bg-neutral-900/90 backdrop-blur-lg fixed bottom-0 w-full z-50 md:hidden rounded-t-xl border-t border-neutral-200/30 dark:border-neutral-800/30 shadow-[0_-5px_25px_rgba(0,0,0,0.05)]">
+<div class="flex justify-around items-center h-16 w-full px-4">
+<button class="text-neutral-400 dark:text-neutral-500 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</button>
+<button class="text-neutral-400 dark:text-neutral-500 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-neutral-400 dark:text-neutral-500 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="text-[#D4AF37] scale-110 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="person" data-weight="fill">person</span>
+</button>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="bg-[#F9F1F0] dark:bg-neutral-950 w-full border-t border-neutral-200 dark:border-neutral-800 mt-24 mb-16 md:mb-0">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto pt-16 pb-8 px-12">
+<div class="text-lg font-serif italic text-neutral-900 dark:text-neutral-100 uppercase tracking-wider">ATELIER MODERN</div>
+<div class="flex gap-8">
+<a class="font-serif text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-500 hover:tracking-[0.2em] transition-all duration-300 opacity-80 hover:opacity-100" href="#">COLECCIÓN</a>
+<a class="font-serif text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-500 hover:tracking-[0.2em] transition-all duration-300 opacity-80 hover:opacity-100" href="#">NOSOTROS</a>
+<a class="font-serif text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-500 hover:tracking-[0.2em] transition-all duration-300 opacity-80 hover:opacity-100" href="#">CONTACTO</a>
+</div>
+<div class="font-serif text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-500 text-center md:text-right">
+                © 2026 ATELIER MODERN. PARA LOS QUE TIENEN BUEN GUSTO.
+            </div>
+</div>
+</footer>
+</body></html>
